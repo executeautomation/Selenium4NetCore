@@ -28,7 +28,8 @@ namespace Selenium4NetCoreProj
         public void Setup()
         {
             new DriverManager().SetUpDriver(new ChromeConfig());
-
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.AddArguments("--headless");
             //Set ChromeDriver
             driver = new ChromeDriver();
             //Get DevTools
